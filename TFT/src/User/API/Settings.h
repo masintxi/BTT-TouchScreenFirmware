@@ -42,7 +42,7 @@ extern "C" {
 #define MAX_STRING_LENGTH     75
 #define MAX_LABEL_LENGTH       7
 #define MAX_GCODE_NAME_LENGTH 75
-#define MAX_GCODE_LENGTH      75
+#define MAX_GCODE_LENGTH      100
 
 #define MIN_STRING_LENGTH      3
 #define MIN_LABEL_LENGTH       3
