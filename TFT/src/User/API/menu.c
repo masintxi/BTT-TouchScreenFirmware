@@ -802,7 +802,11 @@ void menuSetTitle(const LABEL *title)
 
 void menuDrawTitle(void)
 {
-  if (menuType == MENU_TYPE_FULLSCREEN)
+  if (menuType == MENU_TYPE_DIALOG)
+  {
+    return;
+  }
+  else if (menuType == MENU_TYPE_FULLSCREEN)
   {
     if (curMenuRedrawHandle != NULL)
       curMenuRedrawHandle();
@@ -1224,9 +1228,6 @@ void loopCheckBackPress(void)
 
           infoMenu.menu[1] = infoMenu.menu[infoMenu.cur];  // prepare menu tree for jump to 0
           infoMenu.cur = 1;
-
-          if (infoMenu.menu[1] == menuPrinting)
-            clearInfoFile();
         }
       }
     }
